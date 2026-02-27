@@ -1,0 +1,30 @@
+Kịch bản mẫu:
+
+[
+  {
+    "Tình huống dẫn nhập (5s)": {
+      "Lời thoại (Voice-over)": "[Câu hỏi gợi mở vấn đề thực tế tại nhà máy/doanh nghiệp]",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Mở đầu:** [Hình ảnh 3D mô tả bối cảnh]"
+    },
+    "Mô tả bài toán/vấn đề (15s)": {
+      "Lời thoại (Voice-over)": "[Nêu cách giải quyết thông thường và lý do nó thất bại/bị kẹt ở cực tiểu cục bộ]",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Vấn đề:** [Hiển thị đồ thị hoặc hình ảnh minh họa sự bế tắc]"
+    },
+    "Diễn giải/Minh họa (30s)": {
+      "Lời thoại (Voice-over)": "[Giải thích cách thuật toán/xác suất giải quyết vấn đề, kèm công thức cốt lõi]",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Giải pháp:** [Hình ảnh Manim 3D biểu diễn thuật toán hoạt động]"
+    },
+    "Tổng kết kiến thức (30s)": {
+      "Lời thoại (Voice-over)": "[Tóm tắt ý nghĩa sự đánh đổi, hiệu quả thuật toán]",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Tổng kết:** [Đồ thị so sánh kết quả trước và sau khi tối ưu]"
+    },
+    "Tóm tắt từ khóa (10s)": {
+      "Lời thoại (Voice-over)": "Các từ khóa cốt lõi cần nhớ.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Từ khóa:** [3 từ khóa nổi 3D]"
+    },
+    "Gợi ý tiếp theo (10s)": {
+      "Lời thoại (Voice-over)": "[Ứng dụng mở rộng ra các ngành khác]",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Gợi ý:** [Hình ảnh chuyển cảnh]"
+    }
+  }
+]

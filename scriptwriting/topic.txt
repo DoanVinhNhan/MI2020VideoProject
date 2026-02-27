@@ -1,0 +1,18 @@
+1. Ứng dụng Định lý Bayes trong Bộ lọc Spam (Ngữ cảnh: Công ty công nghệ cần hệ thống tự động phân loại hàng triệu email rác mỗi ngày dựa trên các từ khóa đáng ngờ).
+2. Tính xác suất lỗi bit (BER) trong truyền tin (Ngữ cảnh: Kỹ sư viễn thông đang thiết kế mã hóa kênh truyền để đảm bảo tín hiệu từ trạm phát không bị nhiễu do thời tiết).
+3. Đánh giá độ tin cậy của hệ thống mắc nối tiếp/song song (Ngữ cảnh: Kỹ sư cơ khí tính toán xác suất hỏng hóc toàn bộ của một dây chuyền tự động hóa khi một mắt xích bị lỗi).
+4. Phân tích Cây quyết định trong đầu tư (Ngữ cảnh: Giám đốc tài chính SEM tính toán xác suất thành công và rủi ro của một dự án đầu tư chia làm 3 giai đoạn rót vốn).
+5. Mô phỏng phân phối Exponential cho thời gian phản hồi Server (Ngữ cảnh: Kỹ sư hệ thống CNTT cần tối ưu hóa hàng đợi request vào ngày Black Friday để web không bị sập).
+6. Phân phối Chuẩn trong dung sai chi tiết gia công (Ngữ cảnh: Xưởng cơ khí ô tô kiểm soát tỷ lệ lỗi của các trục/lỗ động cơ được sản xuất hàng loạt).
+7. Mô phỏng Nhiễu trắng (Gaussian Noise) chồng lên tín hiệu (Ngữ cảnh: Kỹ sư điện tử xử lý tín hiệu radar bị nhiễu nền để phát hiện chính xác vật thể bay).
+8. Trực quan hóa ma trận hiệp phương sai trong Danh mục đầu tư (Ngữ cảnh: Chuyên gia phân tích rủi ro đang tìm cách kết hợp 2 mã cổ phiếu có tương quan nghịch để giảm thiểu rủi ro thị trường).
+9. Mô phỏng khuếch tán khí thải bằng phân phối 3D (Ngữ cảnh: Kỹ sư môi trường SCE vẽ bản đồ nồng độ ô nhiễm xung quanh một ống khói nhà máy theo không gian 3 chiều).
+10. Định vị Robot và sai số đồng thời 2 trục X, Y (Ngữ cảnh: Lập trình viên xe tự hành AGV tính toán sai số vị trí khi robot di chuyển trong nhà kho).
+11. Hồi quy tuyến tính đa biến dự báo giá nhà (Ngữ cảnh: Công ty bất động sản xây dựng mô hình định giá nhà tự động dựa trên diện tích và khoảng cách đến ga tàu).
+12. Hồi quy tìm đường đặc tuyến để Hiệu chuẩn Cảm biến (Ngữ cảnh: Kỹ sư tự động hóa thiết lập phương trình chuyển đổi từ tín hiệu Volt sang thông số Nhiệt độ/Áp suất thực tế).
+13. Ước lượng khoảng tin cậy cho tỷ lệ chuyển đổi A/B Testing (Ngữ cảnh: Đội ngũ Marketing đánh giá xem giao diện Web mới có thực sự làm tăng tỷ lệ mua hàng hay không).
+14. Ước lượng thời gian trung bình giữa các lần hỏng - MTBF (Ngữ cảnh: Nhà máy linh kiện điện tử cần đưa ra cam kết bảo hành chính xác cho một lô sản phẩm mới).
+15. Kiểm định giả thuyết (T-test) so sánh tốc độ 2 thuật toán (Ngữ cảnh: Kỹ sư Data Science chứng minh thuật toán tìm kiếm mới thực sự nhanh hơn thuật toán cũ, không phải do may mắn).
+16. Kiểm soát chất lượng (QC) phát hiện máy móc lệch chuẩn (Ngữ cảnh: Quản đốc nhà máy dệt may dùng kiểm định thống kê để xem máy dệt có đang cắt sai kích thước quy định hay không).
+17. Mô phỏng hàng đợi tại hệ thống thang máy thông minh (Ngữ cảnh: Ban quản lý tòa nhà 72 tầng muốn lập trình AI điều phối thang máy dựa trên xác suất luồng người các khung giờ).
+18. Rút mẫu lặp lại (Bootstrap) khi không có phân phối chuẩn (Ngữ cảnh: Nhà nghiên cứu y sinh có tập dữ liệu thử nghiệm thuốc rất nhỏ (<20 người) và cần ước lượng hiệu quả chung).
