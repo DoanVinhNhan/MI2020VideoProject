@@ -1,0 +1,28 @@
+[
+  {
+    "Tình huống dẫn nhập (5s)": {
+      "Lời thoại (Voice-over)": "Hãy tưởng tượng bạn là quản đốc của một nhà máy dệt may khổng lồ, nơi hàng vạn mét vải được cắt mỗi ngày. Đột nhiên, một lô hàng có vẻ bị lệch vài milimet so với thiết kế. Bạn sẽ làm gì? Bấm nút dừng toàn bộ dây chuyền, chấp nhận thiệt hại hàng ngàn đô la mỗi giờ, hay nhắm mắt bỏ qua và đối mặt với nguy cơ bị khách hàng trả lại toàn bộ đơn hàng?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Mở đầu:** [Manim 3D: Một không gian tối được chiếu sáng bởi các tia laser. Một dải băng chuyền tốc độ cao di chuyển các cuộn vải 3D. Camera zoom cận cảnh vào cấu trúc lưới vi mô của một tấm vải, nơi các đường chỉ đột ngột phát sáng nhấp nháy màu đỏ cảnh báo sự sai lệch kích thước.]"
+    },
+    "Mô tả bài toán/vấn đề (15s)": {
+      "Lời thoại (Voice-over)": "Thông thường, các quản đốc dựa vào trực giác, rút ngẫu nhiên vài mẫu và nếu thấy sai số, họ lập tức cho dừng máy để chỉnh sửa. Đây là một cái bẫy chết người. Trong sản xuất công nghiệp, sự dao động nhỏ là bản chất tự nhiên của vạn vật, không có cỗ máy nào cắt chính xác tuyệt đối 100% mọi lúc. Vấn đề cốt lõi là sự bế tắc trong việc phân biệt giữa 'nhiễu ngẫu nhiên chấp nhận được' và 'lỗi hệ thống do máy móc thực sự đã lệch chuẩn'. Nếu cứ phản ứng thái quá với mọi sai số nhỏ nhất, bạn sẽ rơi vào cực tiểu cục bộ của sự tối ưu: liên tục sửa chữa một cỗ máy không hề hỏng, làm gián đoạn sản xuất và đẩy chi phí lên cao ngất ngưởng.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Vấn đề:** [Manim 3D: Đồ thị phân tán (Scatter plot) 3D xuất hiện. Các khối cầu nhỏ đại diện cho các mảnh vải nảy lên xuống quanh một mặt phẳng mục tiêu màu trắng. Một bàn tay dạng wireframe (lưới không gian) liên tục giật mạnh mặt phẳng này lên xuống một cách hỗn loạn mỗi khi có một khối cầu lệch ra ngoài, khiến toàn bộ hệ thống các khối cầu phân tán rộng hơn, biểu diễn trực quan sự bế tắc của việc 'sửa chữa quá mức' (over-correction).]"
+    },
+    "Diễn giải/Minh họa (30s)": {
+      "Lời thoại (Voice-over)": "Đó là lúc 'Kiểm định giả thuyết thống kê' (Hypothesis Testing) trở thành vị cứu tinh. Thay vì đoán mò, toán học thiết lập hai thực tại song song: Giả thuyết Không (H0) cho rằng máy vẫn hoạt động hoàn hảo và sai số chỉ là ngẫu nhiên; Giả thuyết Đối (H1) khẳng định máy đã thực sự hỏng. Chúng ta lấy một mẫu gồm 30 mảnh vải, tính giá trị trung bình và ánh xạ nó lên một mặt cong phân phối chuẩn 3D. Bằng cách sử dụng công thức Z-test, ta tính toán p-value - xác suất chính xác để nhận được mức sai số này nếu máy thực sự không hỏng. Nếu p-value trượt xuống dưới ngưỡng alpha 5%, toán học sẽ dõng dạc tuyên bố: 'Đây không phải là sự trùng hợp ngẫu nhiên!'. Ta bác bỏ H0, tự tin dừng máy để hiệu chuẩn mà không sợ quyết định sai lầm.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Giải pháp:** [Manim 3D: Một mặt cong Gaussian (Hình chuông) 3D phát sáng màu xanh lam mượt mà trồi lên từ mặt phẳng tối. Một cơn mưa hạt (đại diện cho dữ liệu mẫu) rơi xuống, tích tụ thành biểu đồ histogram ngay dưới mặt chuông. Hai mặt phẳng laser sắc lẹm màu đỏ chém xuống hai đuôi của đồ thị hình chuông, tạo ra vùng bác bỏ (vùng alpha 5%). Công thức Z = (x̄ - μ) / (σ / √n) lơ lửng bằng font LaTeX phát sáng. Một khối cầu vàng rực rỡ (giá trị trung bình mẫu) rơi xuống, ghim thẳng vào vùng laser đỏ, kích hoạt sóng xung kích lan tỏa khắp màn hình.]"
+    },
+    "Tổng kết kiến thức (30s)": {
+      "Lời thoại (Voice-over)": "Bằng cách thay thế cảm tính bằng một khung logic toán học chặt chẽ, người quản lý biến việc kiểm soát chất lượng thành một môn khoa học chính xác. Sự đánh đổi ở đây vô cùng rõ ràng và có thể đo lường được: bạn chấp nhận một rủi ro rất nhỏ, được kiểm soát chặt chẽ ở mức 5% của việc báo động giả (Sai lầm loại I), để đổi lấy quyền kiểm soát tuyệt đối sự ổn định của toàn bộ dây chuyền. Thuật toán này phá vỡ vòng lặp bế tắc của việc sửa chữa mù quáng, tối ưu hóa thời gian vận hành của máy móc, đồng thời dựng lên một bức tường thành vững chắc ngăn chặn các sản phẩm lỗi lọt ra ngoài thị trường.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Tổng kết:** [Manim 3D: Hai hệ trục tọa độ 3D đặt cạnh nhau. Bên trái là một đường gấp khúc màu đỏ chói, dao động hỗn loạn đại diện cho chi phí sửa chữa mù quáng. Bên phải, dữ liệu hội tụ thành một đường ống năng lượng màu xanh lục mượt mà, ổn định chạy thẳng tắp. Một chiếc cân tiểu ly bằng vàng 3D xuất hiện, hai đĩa cân chứa dòng chữ 'Sai lầm loại I' và 'Hiệu suất', tự động cân bằng hoàn hảo trong không gian.]"
+    },
+    "Tóm tắt từ khóa (10s)": {
+      "Lời thoại (Voice-over)": "Để làm chủ nghệ thuật kiểm soát chất lượng này, hãy khắc ghi ba nền tảng cốt lõi: Kiểm định giả thuyết, Phân phối chuẩn, và Giá trị p-value.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Từ khóa:** [Manim 3D: Ba khối lập phương kim loại lơ lửng trong môi trường không trọng lực, từ từ xoay quanh trục chéo của chúng. Các chùm tia laser khắc lên bề mặt mỗi khối ba cụm từ khóa bằng hiệu ứng neon rực sáng: 'Kiểm định giả thuyết', 'Phân phối chuẩn', 'p-value'.]"
+    },
+    "Gợi ý tiếp theo (10s)": {
+      "Lời thoại (Voice-over)": "Sức mạnh của kiểm định thống kê không chỉ dừng lại ở các nhà máy cơ khí. Sẽ ra sao nếu chúng ta dùng chính thuật toán này để quyết định xem một loại vắc-xin mới thực sự cứu sống bệnh nhân hay chỉ là hiệu ứng giả dược?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Gợi ý:** [Manim 3D: Các đường chỉ của tấm vải 3D tan biến và mượt mà cuộn xoắn lại, tái cấu trúc thành một chuỗi xoắn kép DNA khổng lồ. Các phân tử thuốc dạng khối cầu phát sáng bám vào chuỗi DNA, kèm theo một đường sóng nhịp tim monitor chạy cắt ngang không gian.]"
+    }
+  }
+]

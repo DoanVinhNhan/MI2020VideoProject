@@ -1,0 +1,28 @@
+[
+  {
+    "Tình huống dẫn nhập (5s)": {
+      "Lời thoại (Voice-over)": "Bạn đã bao giờ nhìn vào màn hình radar chớp tắt liên tục và tự hỏi, làm thế nào các kỹ sư điện tử có thể phân biệt được đâu là một chiếc phi cơ tàng hình đang tiến lại gần, và đâu chỉ là những nhiễu loạn vô hại của tầng điện ly?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Mở đầu:** [Manim 3D: Một không gian tối đen, ở giữa là một mặt cầu radar 3D màu xanh lục đang quét. Bất ngờ, hàng ngàn hạt nhiễu nhỏ li ti (particles) phát sáng nhấp nháy ngẫu nhiên bao phủ toàn bộ không gian, che khuất một khối đa diện sắc nét đại diện cho vật thể bay đang di chuyển chậm.]"
+    },
+    "Mô tả bài toán/vấn đề (15s)": {
+      "Lời thoại (Voice-over)": "Trong thực tế, tín hiệu phản xạ từ một vật thể bay khi trở về trạm radar thường vô cùng yếu ớt. Vấn đề là, tín hiệu này không bao giờ đi một mình. Nó bị nhấn chìm trong một biển sóng điện từ hỗn loạn phát ra từ bức xạ vũ trụ, mây mưa, hay chính hệ thống nhiệt của anten. Nếu chúng ta thiết lập một ngưỡng cảnh báo quá thấp theo cách thông thường, hệ thống sẽ liên tục báo động giả, khiến người điều khiển hoang mang. Nhưng nếu đặt ngưỡng quá cao, chiếc máy bay kia sẽ hoàn toàn tàng hình trên màn hình giám sát.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Vấn đề:** [Manim 3D: Một trục tọa độ không gian 3D (t, amplitude, probability). Xuất hiện một đường cong tín hiệu hình sin màu vàng mỏng manh, ngay lập tức bị hàng vạn dao động răng cưa màu đỏ đè lên tạo thành một mớ bùng nhùng hỗn loạn. Một mặt phẳng cắt ngang bán trong suốt (đại diện cho ngưỡng threshold) di chuyển lên xuống: khi xuống thấp, vô số đỉnh đỏ xuyên qua tạo các vụ nổ nhỏ báo động giả; khi lên cao, đỉnh vàng bị chìm lấp hoàn toàn dưới mặt phẳng.]"
+    },
+    "Diễn giải/Minh họa (30s)": {
+      "Lời thoại (Voice-over)": "Chìa khóa để phá vỡ sự bế tắc này nằm ở việc thấu hiểu bản chất thống kê của sự hỗn loạn, cụ thể là Nhiễu trắng Gauss - Gaussian Noise. Theo định lý giới hạn trung tâm, tổng hợp của vô số nguồn nhiễu độc lập sẽ tạo ra một phân phối chuẩn hoàn hảo. Phương trình tín hiệu thu được lúc này là Y(t) bằng S(t) cộng N(t). Trong đó, N(t) là biến ngẫu nhiên có kỳ vọng bằng 0 và phương sai Sigma bình phương. Thay vì cố gắng nhìn vào từng đỉnh sóng đơn lẻ, các kỹ sư sử dụng hàm mật độ xác suất. Họ áp dụng các bộ lọc tương quan để lấy tích phân tín hiệu theo thời gian. Vì nhiễu Gauss có tính chất đối xứng quanh trục 0, qua quá trình tích lũy, các giá trị nhiễu dương và âm sẽ tự động triệt tiêu lẫn nhau, trong khi tín hiệu thực S(t) mang tính chu kỳ sẽ được cộng dồn và khuếch đại vọt lên khỏi nền nhiễu.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Giải pháp:** [Manim 3D: Mớ bùng nhùng tín hiệu đỏ được 'kéo giãn' theo trục Z. Các điểm dữ liệu bay lên và rơi xuống tạo thành một mặt cong biểu diễn mật độ xác suất hình chuông (Gaussian Bell Curve) trong suốt, rực rỡ với dải màu gradient từ tâm xanh dương ra rìa tím. Phương trình Y(t) = S(t) + N(t) nổi lên dưới dạng toán học 3D phát sáng. Khi một mặt phẳng bộ lọc chạy dọc theo trục thời gian, các hạt nhiễu (particles) âm và dương va chạm vào nhau và vỡ vụn, để lại một xung tín hiệu màu vàng rực rỡ xuyên thủng đỉnh của đường cong chuông, tạo ra một gợn sóng không gian mạnh mẽ.]"
+    },
+    "Tổng kết kiến thức (30s)": {
+      "Lời thoại (Voice-over)": "Việc mô phỏng chính xác Nhiễu trắng Gauss cho phép chúng ta tính toán được Tỷ số Tín hiệu trên Nhiễu, hay còn gọi là SNR. Bằng cách thiết lập ngưỡng phát hiện dựa trên phần đuôi của phân phối xác suất, hệ thống radar có thể tối ưu hóa sự đánh đổi kinh điển: tối đa hóa xác suất phát hiện mục tiêu (Probability of Detection) trong khi giữ tỷ lệ báo động giả (False Alarm Rate) ở mức tiệm cận không. Đây không chỉ là một thủ thuật toán học, mà là nền tảng sống còn của mọi hệ thống viễn thông và phòng không hiện đại, biến những tín hiệu điện từ tưởng chừng vô nghĩa thành thông tin sinh tử.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Tổng kết:** [Manim 3D: Hai mặt cong Gauss 3D nằm cạnh nhau trên trục không gian - một đại diện cho 'Chỉ có nhiễu' (màu đỏ) và một đại diện cho 'Tín hiệu + Nhiễu' (màu xanh). Một vách ngăn kính (Threshold) trượt dọc để tối ưu hóa vùng giao nhau. Khi vách ngăn dừng lại ở điểm tối ưu, biểu đồ cột 3D bên cạnh hiển thị tỷ lệ 'False Alarm' tụt xuống sát đáy, trong khi cột 'Detection' vươn cao kịch trần, tỏa ra ánh sáng hào quang rực rỡ.]"
+    },
+    "Tóm tắt từ khóa (10s)": {
+      "Lời thoại (Voice-over)": "Để làm chủ nghệ thuật xử lý tín hiệu này, hãy ghi nhớ ba nền tảng cốt lõi: Nhiễu trắng Gauss, Tỷ số Tín hiệu trên Nhiễu SNR, và Hàm mật độ xác suất.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Từ khóa:** [Manim 3D: Ba khối lăng trụ thủy tinh lơ lửng trong không gian trọng lực giả, xoay chậm rãi quanh một trục ánh sáng trung tâm. Khi ánh sáng quét qua, trên mỗi bề mặt khắc chìm các từ khóa: 'Gaussian Noise', 'SNR', 'Probability Density' phát ra các tia laser đan chéo nhau.]"
+    },
+    "Gợi ý tiếp theo (10s)": {
+      "Lời thoại (Voice-over)": "Nhưng điều gì sẽ xảy ra nếu nhiễu không còn là những dao động ngẫu nhiên của tự nhiên, mà là những tín hiệu giả mạo có chủ đích để đánh lừa radar? Chúng ta sẽ đối phó với tác chiến điện tử như thế nào?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Gợi ý:** [Manim 3D: Camera lùi ra xa, sóng radar màu vàng đang quét ổn định bỗng nhiên bị những luồng sóng màu đen có hình dáng y hệt tấn công có chủ đích, bóp méo hoàn toàn không gian lưới 3D, màn hình chớp đỏ cảnh báo rồi từ từ chìm vào bóng tối.]"
+    }
+  }
+]

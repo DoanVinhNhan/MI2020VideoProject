@@ -1,0 +1,28 @@
+[
+  {
+    "Tình huống dẫn nhập (5s)": {
+      "Lời thoại (Voice-over)": "Bạn đã bao giờ tự hỏi làm thế nào các quỹ phòng hộ tỷ đô vẫn đứng vững, thậm chí sinh lời, ngay cả khi toàn bộ thị trường chứng khoán chìm trong sắc đỏ của một đợt suy thoái bất ngờ?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Mở đầu:** [Không gian 3D tối, một trục tọa độ thời gian thực hiện ra bằng Manim. Hai đường cong dữ liệu dạng ống sáng neon lướt qua màn hình. Đường màu đỏ (Cổ phiếu A) bất ngờ lao dốc cắm đầu, nhưng ngay lập tức, đường màu xanh lục (Cổ phiếu B) bẻ lái vút lên cao. Ở giữa, một quả cầu năng lượng đại diện cho 'Tổng tài sản' vẫn lơ lửng trên một đường thẳng tắp, phát ra các gợn sóng đồng tâm.]"
+    },
+    "Mô tả bài toán/vấn đề (15s)": {
+      "Lời thoại (Voice-over)": "Sai lầm phổ biến nhất của các nhà đầu tư nghiệp dư là đa dạng hóa một cách ngây thơ. Họ mua hàng chục mã cổ phiếu khác nhau và tin rằng mình đã an toàn. Nhưng toán học chứng minh điều ngược lại. Nếu tất cả các cổ phiếu này đều có tương quan thuận—tức là cùng tăng và cùng giảm theo nhịp đập chung của nền kinh tế—thì khi cơn bão khủng hoảng ập đến, rủi ro hệ thống sẽ kéo sập toàn bộ danh mục của bạn xuống vực thẳm mà không có bất kỳ lực cản nào.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Vấn đề:** [Một đám mây gồm hàng trăm hạt particle 3D lơ lửng trên hệ trục tọa độ không gian. Khi một mặt phẳng lưới đại diện cho 'Cú sốc thị trường' quét qua từ trên xuống, toàn bộ đám mây hạt đồng loạt chuyển sang màu đỏ rực và rơi tự do xuống mặt phẳng đáy. Một đồ thị cột 3D bên cạnh hiển thị chỉ số 'Độ biến động' dâng cao vượt mức giới hạn, nhấp nháy cảnh báo lỗi.]"
+    },
+    "Diễn giải/Minh họa (30s)": {
+      "Lời thoại (Voice-over)": "Đây chính là lúc Ma trận hiệp phương sai trở thành vũ khí tối thượng của các chuyên gia phân tích rủi ro. Phương sai của một danh mục không chỉ là phép cộng đơn thuần của từng rủi ro đơn lẻ. Bí mật nằm ở thành phần tương tác chéo trong phương trình Markowitz. Nếu ta chủ đích kết hợp hai mã cổ phiếu có 'tương quan nghịch'—chẳng hạn như một hãng hàng không và một công ty khai thác dầu mỏ—hiệp phương sai sẽ mang giá trị âm. Về mặt toán học, giá trị âm này sẽ trực tiếp triệt tiêu phương sai tổng thể, biến biến động bất lợi của cổ phiếu này thành tấm đệm đỡ hoàn hảo cho cổ phiếu kia.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Giải pháp:** [Manim 3D: Một ma trận 2x2 bằng kính trong suốt nổi lên. Hai ô trên đường chéo chính là các cột trụ màu cam dao động mạnh. Hai ô chéo phụ bất ngờ sụt lún xuống dưới mặt phẳng, phát ra ánh sáng màu băng giá biểu thị giá trị âm. Công thức 3D hiện nổi: sigma_p^2 = w_1^2*sigma_1^2 + w_2^2*sigma_2^2 + 2w_1*w_2*Cov. Khi thành phần Cov chuyển xanh, một lực vô hình ép chặt khối cầu 'Rủi ro tổng' ở trung tâm làm nó co rút lại chỉ còn một nửa.]"
+    },
+    "Tổng kết kiến thức (30s)": {
+      "Lời thoại (Voice-over)": "Bằng cách tinh chỉnh tỷ trọng vốn đầu tư, chúng ta đang thực sự lướt trên một địa hình rủi ro đa chiều. Mục tiêu tối thượng của bài toán tối ưu hóa là tìm ra điểm cực tiểu toàn cục trên mặt cong rủi ro này. Nhờ có ma trận hiệp phương sai âm, điểm đáy của mặt cong bị kéo xuống một mức thấp kỷ lục, thấp hơn rất nhiều so với việc đầu tư đơn lẻ. Rủi ro thị trường đã bị triệt tiêu bằng sự bù trừ toán học tinh tế, giúp tối đa hóa tỷ lệ Sharpe mà không phải hy sinh lợi nhuận kỳ vọng.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Tổng kết:** [Một mặt cong Paraboloid 3D được dựng lên từ các lưới wireframe, trục Z biểu diễn rủi ro. Các vùng mép cao có màu đỏ gắt, thoai thoải dần xuống vùng đáy màu xanh lục thẳm. Một viên bi kim loại sáng bóng lăn lướt trên mặt cong và dừng lại chính xác tại điểm trũng nhất. Từ điểm này, hai tia laser bắn vuông góc xuống mặt phẳng XY bên dưới, hiển thị chính xác tỷ lệ phân bổ vốn tối ưu.]"
+    },
+    "Tóm tắt từ khóa (10s)": {
+      "Lời thoại (Voice-over)": "Để làm chủ nghệ thuật quản trị rủi ro định lượng, hãy khắc sâu ba khái niệm nền tảng này: Ma trận hiệp phương sai, Tương quan nghịch, và Đường biên hiệu quả.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Từ khóa:** [Ba khối đa diện đều bằng pha lê lơ lửng và tự quay quanh trục trong không gian 3D. Các chùm sáng hội tụ bắn vào bề mặt của chúng, khắc chìm và làm rực sáng ba cụm từ khóa bằng phông chữ neon sắc nét, kèm theo hiệu ứng hạt bụi vàng.]"
+    },
+    "Gợi ý tiếp theo (10s)": {
+      "Lời thoại (Voice-over)": "Tuy nhiên, bài toán sẽ trở nên vô cùng phức tạp khi danh mục của bạn phình to từ hai lên đến hai nghìn mã cổ phiếu. Làm thế nào để thuật toán Phân tích thành phần chính PCA có thể thuần hóa khối dữ liệu khổng lồ này?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Gợi ý:** [Ma trận 2x2 ban đầu đột ngột nhân bản, vỡ vụn và mở rộng thành một siêu ma trận NxN trôi nổi. Các luồng dữ liệu ánh sáng chạy dọc ngang qua hàng vạn ô ma trận, hội tụ lại thành ba trục vector riêng rực sáng xuyên thủng màn đêm.]"
+    }
+  }
+]

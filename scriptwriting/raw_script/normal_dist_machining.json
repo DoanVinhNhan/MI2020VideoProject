@@ -1,0 +1,28 @@
+[
+  {
+    "Tình huống dẫn nhập (5s)": {
+      "Lời thoại (Voice-over)": "Bạn có bao giờ tưởng tượng một chiếc xe hơi đang lao đi trên cao tốc bỗng nhiên chết máy, chỉ vì một trục động cơ nhỏ hơn lỗ lắp ráp đúng bằng một phần mười sợi tóc? Trong một xưởng cơ khí sản xuất hàng triệu chi tiết mỗi tháng, làm sao các kỹ sư có thể ngăn chặn thảm họa này mà không cần tốn thời gian đo lường thủ công từng bộ phận một?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Mở đầu:** [Không gian Manim 3D tối, camera zoom cận cảnh vào một lốc máy ô tô được render dưới dạng khung dây (wireframe) trong suốt. Một trục kim loại phát sáng màu xanh lam đang xoay với tốc độ cao bên trong lỗ trục. Đột nhiên, khe hở vi mô bị phóng to, trục rung lắc dữ dội, chuyển sang màu đỏ rực cảnh báo và vỡ vụn thành các hạt lơ lửng trong không gian.]"
+    },
+    "Mô tả bài toán/vấn đề (15s)": {
+      "Lời thoại (Voice-over)": "Trong gia công thực tế, máy móc không bao giờ hoàn hảo tuyệt đối. Sự mài mòn của dao cụ, dao động nhiệt độ, hay rung chấn cơ học luôn tạo ra những sai số ngẫu nhiên. Nếu chỉ nhìn vào các con số đo lường đơn lẻ, chúng ta sẽ thấy một mớ hỗn độn không có quy luật. Những chi tiết vượt ra khỏi Giới hạn dung sai trên và dưới sẽ trở thành phế phẩm đắt đỏ, hoặc tệ hơn là nguyên nhân gây ra những tai nạn thảm khốc khi sản phẩm đến tay người dùng cuối.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Vấn đề:** [Đồ thị phân tán (Scatter plot) 3D xuất hiện, hàng ngàn điểm ảnh đại diện cho đường kính trục rơi xuống một mặt phẳng tạo thành một đám mây điểm hỗn loạn. Hai mặt phẳng lưới màu đỏ rực hiện lên song song, đại diện cho Giới hạn dung sai (USL và LSL). Các điểm lọt ra ngoài hai mặt phẳng này lập tức biến thành màu đen xỉn và bốc khói, một bộ đếm số phế phẩm góc màn hình nhảy số liên tục.]"
+    },
+    "Diễn giải/Minh họa (30s)": {
+      "Lời thoại (Voice-over)": "Đó là lúc phép màu của Phân phối Chuẩn, hay đường cong hình chuông, lộ diện để thiết lập trật tự. Khi gom nhóm hàng vạn dữ liệu hỗn loạn kia lại, chúng tự động sắp xếp thành một mặt cong hoàn mỹ. Hầu hết các chi tiết sẽ tập trung ở giá trị mục tiêu, gọi là trung bình nguy (μ), và mức độ phân tán được kiểm soát bởi độ lệch chuẩn sigma (σ). Toán học chỉ ra rằng, bằng cách tinh chỉnh quy trình gia công sao cho khoảng cách 6-Sigma nằm gọn bên trong giới hạn dung sai, xác suất tạo ra một trục động cơ lỗi sẽ giảm xuống mức không tưởng: chỉ 3.4 phần triệu. Công thức hàm mật độ xác suất lúc này đóng vai trò như một bản thiết kế định lượng rủi ro tuyệt đối.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Giải pháp:** [Bằng thư viện Manim 3D, đám mây điểm hỗn loạn tan chảy và đùn lên thành một mặt cong Gaussian 3D mượt mà, phát quang với dải màu gradient từ tâm xanh lục sang rìa vàng. Công thức f(x) của phân phối chuẩn bay lơ lửng phía trên với các biến số μ và σ nhấp nháy. Các mặt phẳng lưới ánh sáng quét từ tâm μ sang hai bên, đánh dấu các mốc 1σ, 2σ, 3σ. Phần diện tích dưới đường cong bị cắt bởi mặt phẳng dung sai đỏ được tô màu đỏ thẫm, sau đó co rút lại thành một đường chỉ mỏng manh khi đường cong chuông được bóp hẹp lại.]"
+    },
+    "Tổng kết kiến thức (30s)": {
+      "Lời thoại (Voice-over)": "Nhờ ứng dụng Phân phối Chuẩn, quản lý chất lượng không còn là việc chạy theo nhặt sạn. Thay vì kiểm tra 100% sản phẩm, các kỹ sư chỉ cần lấy mẫu ngẫu nhiên một lô nhỏ, tính toán độ lệch chuẩn và ngay lập tức chẩn đoán được 'sức khỏe' của cả dây chuyền. Nếu đỉnh hình chuông bắt đầu lệch tâm hoặc phình to ra, hệ thống sẽ tự động cảnh báo để kỹ thuật viên hiệu chỉnh lại máy CNC trước khi bất kỳ phế phẩm nào thực sự bị tạo ra. Đây chính là sự chuyển đổi vĩ đại từ việc kiểm soát chất lượng bị động sang tối ưu hóa quy trình chủ động, tiết kiệm hàng tỷ đồng cho doanh nghiệp.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Tổng kết:** [Một đồ thị 3D hiển thị đường cong hình chuông đang từ từ trượt lệch sang phải (về phía vạch đỏ). Ngay lập tức, một cánh tay robot 3D xuất hiện, vặn một con ốc ảo trên không trung. Đường cong chuông lập tức trượt về đúng tâm trung bình, đồng thời vuốt cao và hẹp lại. Các hạt màu đỏ biến mất hoàn toàn, thay vào đó là một dòng suối các trục động cơ màu xanh lục hoàn hảo trượt mượt mà trên băng chuyền ảo.]"
+    },
+    "Tóm tắt từ khóa (10s)": {
+      "Lời thoại (Voice-over)": "Để làm chủ bài toán kiểm soát chất lượng này, hãy ghi nhớ ba nền tảng cốt lõi: Phân phối chuẩn, Độ lệch chuẩn Sigma, và Giới hạn dung sai.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Từ khóa:** [Ba khối đa diện 3D bằng kim loại sáng bóng lơ lửng, xoay tròn quanh một trục năng lượng ở giữa. Trên bề mặt mỗi khối khắc chìm và phát sáng neon ba cụm từ: 'Phân phối chuẩn', 'Độ lệch chuẩn (σ)', 'Giới hạn dung sai'.]"
+    },
+    "Gợi ý tiếp theo (10s)": {
+      "Lời thoại (Voice-over)": "Nếu Phân phối Chuẩn có thể thống trị độ chính xác trong nhà máy cơ khí, vậy điều gì sẽ xảy ra khi ta áp dụng đường cong hình chuông này để dự báo sự sụp đổ của thị trường chứng khoán? Liệu rủi ro tài chính có tuân theo một quy luật tương tự?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Gợi ý:** [Hình ảnh các trục kim loại mờ dần, chuyển cảnh mượt mà (morphing) thành một biểu đồ nến 3D của thị trường chứng khoán đang nhấp nhô dữ dội. Một đường cong hình chuông màu vàng kim phủ bóng mờ ảo lên các đáy của biểu đồ, kèm theo tiếng gõ nhịp tim dồn dập.]"
+    }
+  }
+]

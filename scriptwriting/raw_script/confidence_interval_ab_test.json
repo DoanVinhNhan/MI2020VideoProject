@@ -1,0 +1,28 @@
+[
+  {
+    "Tình huống dẫn nhập (5s)": {
+      "Lời thoại (Voice-over)": "Hãy tưởng tượng đội ngũ của bạn vừa dành hàng tháng trời để thiết kế lại toàn bộ giao diện website bán hàng. Ngày đầu tiên ra mắt, tỷ lệ mua hàng tăng nhẹ 0.4%. Nhưng liệu đây là một chiến thắng thực sự của thiết kế mới, hay đơn giản chỉ là do hôm nay khách hàng vô tình 'vui tính' chốt đơn nhiều hơn?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Mở đầu:** [Không gian Manim 3D tối, một màn hình lưới chia làm hai nửa. Nửa trái là phiên bản A (màu xanh dương), nửa phải là phiên bản B (màu cam). Các hạt particle đại diện cho người dùng liên tục trượt xuống phễu 3D, với các biểu tượng giỏ hàng thỉnh thoảng phát sáng lóe lên ở hai bên.]"
+    },
+    "Mô tả bài toán/vấn đề (15s)": {
+      "Lời thoại (Voice-over)": "Trong Marketing, chúng ta rất dễ bị đánh lừa bởi những con số tuyệt đối. Phiên bản A có 100 người mua trên 5000 lượt truy cập, tỷ lệ 2.0%. Phiên bản B có 120 người mua, tỷ lệ 2.4%. Nhìn bề ngoài, sếp của bạn sẽ yêu cầu triển khai ngay phiên bản B. Nhưng hãy cẩn thận! Giống như việc tung một đồng xu hoàn hảo 100 lần hiếm khi ra đúng 50 lần ngửa, hành vi người dùng luôn chứa đựng nhiễu loạn ngẫu nhiên. Nếu vội vã kết luận chỉ dựa trên sự chênh lệch nhỏ bé này mà không xét đến quy mô mẫu, doanh nghiệp có thể đổ tiền vào một 'dương tính giả', thay đổi một giao diện thực chất không mang lại giá trị cốt lõi nào trong dài hạn.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Vấn đề:** [Đồ thị cột 3D xuất hiện. Cột cam (B) cao hơn cột xanh (A) một chút. Đột nhiên, cả hai cột bắt đầu rung lắc dữ dội theo trục dọc, thể hiện sự bất định. Một đám mây nhiễu hạt (noise cloud) bán trong suốt bao phủ lấy các con số '2.0%' và '2.4%', trong khi ở hậu cảnh, một đồng xu 3D đang xoay tít không ngừng.]"
+    },
+    "Diễn giải/Minh họa (30s)": {
+      "Lời thoại (Voice-over)": "Để tách bạch tín hiệu thật khỏi tiếng ồn ngẫu nhiên, Xác suất Thống kê cung cấp một công cụ tối thượng: Khoảng tin cậy cho sự khác biệt tỷ lệ. Thay vì chỉ nhìn vào hai con số đơn lẻ, chúng ta ánh xạ tỷ lệ chuyển đổi của cả hai phiên bản lên các đường cong phân phối chuẩn. Bằng cách tính toán Sai số chuẩn (Standard Error) dựa trên kích thước mẫu và tỷ lệ của từng nhóm, thuật toán sẽ hợp nhất chúng để tạo ra một đường cong hình chuông duy nhất đại diện cho giá trị: p_B trừ p_A. Nếu toàn bộ phần diện tích 95% của khối hình chuông 3D này nằm hoàn toàn về phía dương, vượt qua vạch số 0, bạn có một kết quả mang ý nghĩa thống kê. Ngược lại, nếu khối phân phối này vắt ngang qua vạch 0, sự tăng trưởng 0.4% kia hoàn toàn có thể chỉ là một ảo ảnh toán học. Công thức này đóng vai trò như một cỗ máy phát hiện nói dối, ép các luồng dữ liệu phải chứng minh được tính nhất quán của chúng.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Giải pháp:** [Manim 3D: Hai mặt cong Gaussian (bell curves) dạng lưới, một xanh và một cam, trượt lại gần và dung hợp thành một mặt cong duy nhất. Camera xoay góc 45 độ. Một mặt phẳng phát sáng màu đỏ rực cắt ngang không gian đại diện cho 'Ngưỡng 0'. Vùng diện tích 95% của đường cong mới được tô bóng bằng màu xanh neon. Công thức Δp ± Z√(pA(1-pA)/nA + pB(1-pB)/nB) từ từ hiện ra dưới dạng các khối chữ 3D mạ vàng trôi nổi phía trên.]"
+    },
+    "Tổng kết kiến thức (30s)": {
+      "Lời thoại (Voice-over)": "Vậy điều này định hình chiến lược kinh doanh của bạn như thế nào? A/B Testing không phải là cuộc đua xem số nào lớn hơn, mà là phép đo lường độ tin cậy của sự khác biệt. Khoảng tin cậy cung cấp cho bạn cả cận dưới và cận trên của tác động thực tế. Nó dõng dạc tuyên bố: 'Chúng ta có 95% cơ sở để tin rằng giao diện mới sẽ làm tăng tỷ lệ mua hàng từ 0.1% đến 0.7%'. Sự khắt khe về mặt toán học này triệt tiêu hoàn toàn các quyết định cảm tính. Nó cho đội ngũ Marketing biết chính xác khi nào nên tiếp tục thu thập thêm dữ liệu, khi nào nên tự tin tung ra sản phẩm mới, và khi nào nên vứt bỏ một thiết kế tồi. Bạn đang đánh đổi ảo giác về sự chắc chắn tuyệt đối để lấy sức mạnh của xác suất, biến những phỏng đoán mù mờ thành một chiến lược đầu tư sắc bén và không có rủi ro ẩn.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Tổng kết:** [Một trục thời gian 3D trải dài. Đoạn khoảng tin cậy màu xanh neon [0.1%, 0.7%] phóng các tia sáng về phía trước, tạo thành một biểu đồ dự phóng doanh thu vững chắc. Đám mây nhiễu loạn ban đầu tan biến hoàn toàn. Các hạt vàng (đại diện cho lợi nhuận thật) chảy mượt mà vào một két sắt trung tâm, trong khi một tấm khiên năng lượng có chữ '95% Confidence' đánh bật các hạt đỏ (dương tính giả) văng ra ngoài.]"
+    },
+    "Tóm tắt từ khóa (10s)": {
+      "Lời thoại (Voice-over)": "Để làm chủ nghệ thuật A/B Testing, hãy khắc sâu ba khái niệm nền tảng này: Tỷ lệ chuyển đổi, Khoảng tin cậy, và Ý nghĩa thống kê.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Từ khóa:** [Ba quả cầu kim loại sáng bóng xoay quanh một trục trung tâm. Khi quay đến viền camera, chúng mở bung ra thành ba tấm thẻ hình học 3D sắc nét, trên mặt khắc chìm ánh sáng LED ba từ khóa tương ứng, được chiếu rọi bởi một luồng sáng thể tích (volumetric lighting).]"
+    },
+    "Gợi ý tiếp theo (10s)": {
+      "Lời thoại (Voice-over)": "Chúng ta đã dùng tư duy này để bán hàng, nhưng nếu áp dụng chính logic này vào thử nghiệm lâm sàng một loại vaccine mới thì sao? Làm thế nào để toán học chứng minh thuốc thực sự có tác dụng chứ không phải là hiệu ứng giả dược?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Gợi ý:** [Các khối hộp giao diện web vỡ vụn và tái tổ hợp mượt mà thành một chuỗi xoắn kép DNA 3D khổng lồ. Chuỗi DNA xoay tròn, các hạt phân tử xung quanh biến thành màu xanh (được chữa khỏi) hoặc đỏ (lây nhiễm), bị bao bọc bởi một hệ tọa độ không gian toán học phức tạp.]"
+    }
+  }
+]

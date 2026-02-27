@@ -1,0 +1,28 @@
+[
+  {
+    "Tình huống dẫn nhập (5s)": {
+      "Lời thoại (Voice-over)": "Bạn đã bao giờ thắc mắc làm thế nào các nền tảng bất động sản có thể định giá hàng triệu căn nhà chỉ trong chớp mắt, ngay khi bạn vừa nhập thông tin chưa? Việc cử chuyên gia đến tận nơi thẩm định thủ công đã trở thành dĩ vãng trong kỷ nguyên của dữ liệu.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Mở đầu:** [Không gian 3D tối, một mô hình thành phố low-poly hiện lên. Camera Manim 3D lướt nhanh qua các dãy nhà, mỗi khi đi qua, các nhãn giá dạng hologram màu xanh neon tự động bật lên liên tục. Cuối cùng, một căn nhà trung tâm nhấp nháy dấu chấm hỏi đỏ lớn lơ lửng trên mái, tạo cảm giác bí ẩn.]"
+    },
+    "Mô tả bài toán/vấn đề (15s)": {
+      "Lời thoại (Voice-over)": "Nếu chỉ dựa vào diện tích để định giá, mô hình của chúng ta sẽ liên tục vấp ngã. Một căn biệt thự rộng lớn nhưng nằm ở ngoại ô xa xôi hoàn toàn có thể rẻ hơn một căn hộ nhỏ hẹp nhưng nằm ngay sát trung tâm ga tàu điện ngầm. Bài toán định giá không phải là một đường thẳng đơn giản trên mặt phẳng hai chiều, mà là sự giằng xé phức tạp giữa nhiều yếu tố không gian và tiện ích.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Vấn đề:** [Đồ thị 2D Manim hiển thị trục X (Diện tích) và Y (Giá). Một đường thẳng hồi quy đơn biến màu vàng cố gắng khớp các điểm dữ liệu nhưng sai số (các đoạn thẳng đứt nét màu đỏ) vô cùng lớn. Đột ngột, trục Z (Khoảng cách đến ga tàu) đâm xuyên qua màn hình, kéo các điểm dữ liệu bung ra thành một đám mây điểm lơ lửng trong không gian 3D, khiến đường thẳng màu vàng gãy vụn.]"
+    },
+    "Diễn giải/Minh họa (30s)": {
+      "Lời thoại (Voice-over)": "Đây là lúc Hồi quy tuyến tính đa biến tỏa sáng. Thay vì tìm một đường thẳng, thuật toán sẽ đi tìm một mặt phẳng tối ưu trong không gian ba chiều. Phương trình lúc này là Y bằng Beta 0 cộng Beta 1 nhân Diện tích, cộng Beta 2 nhân Khoảng cách. Các hệ số Beta chính là trọng số quyết định mức độ ảnh hưởng của từng biến. Thuật toán sẽ liên tục nghiêng và xoay mặt phẳng này sao cho tổng bình phương khoảng cách từ tất cả các điểm dữ liệu thực tế đến mặt phẳng đạt giá trị cực tiểu. Khi đó, mặt phẳng dự báo đã hội tụ và sẵn sàng hoạt động.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Giải pháp:** [Trong không gian Manim 3D, phương trình toán học hiện lên rực rỡ. Một mặt phẳng lưới (grid plane) màu lam ngọc xuất hiện giữa đám mây điểm. Từ mỗi điểm dữ liệu (hạt sáng màu trắng), các đường thẳng đứng biểu diễn sai số chiếu thẳng xuống mặt phẳng. Mặt phẳng bắt đầu xoay, nghiêng mượt mà. Cùng lúc đó, các đường sai số co ngắn lại. Màu sắc mặt phẳng chuyển dần từ đỏ sang dải màu gradient xanh dương - xanh lá khi đạt trạng thái tối ưu hóa cực tiểu.]"
+    },
+    "Tổng kết kiến thức (30s)": {
+      "Lời thoại (Voice-over)": "Kết quả thu được là một cỗ máy định giá tự động, khách quan và có khả năng mở rộng vô hạn. Mô hình đã tự động học được sự đánh đổi từ dữ liệu lịch sử: diện tích tỷ lệ thuận với giá trị, trong khi khoảng cách đến ga tàu lại tỷ lệ nghịch. Bằng cách chiếu thông tin của một căn nhà mới lên mặt phẳng toán học này, công ty bất động sản ngay lập tức đưa ra được mức giá niêm yết với sai số thấp nhất, loại bỏ hoàn toàn cảm tính của con người trong các giao dịch hàng triệu đô la.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Tổng kết:** [Camera Manim 3D quay cận cảnh mặt phẳng hồi quy đã ổn định. Một khối hộp 3D lấp lánh (đại diện cho căn nhà mới) rơi từ trên cao xuống, chạm chính xác vào một tọa độ trên mặt phẳng lưới. Ngay tại điểm chạm, một sóng âm gợn nhẹ lan tỏa và một cột sáng bắn vọt lên trục Y, hiển thị con số giá tiền chính xác bằng font chữ kỹ thuật số phát sáng rực rỡ.]"
+    },
+    "Tóm tắt từ khóa (10s)": {
+      "Lời thoại (Voice-over)": "Hãy ghi nhớ ba từ khóa cốt lõi giúp hệ thống này vận hành: Hồi quy đa biến, Mặt phẳng dự báo, và Phương pháp bình phương tối thiểu.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Từ khóa:** [Ba khối đa diện dodecahedron trong suốt, lơ lửng và xoay tròn chậm rãi quanh một trục ánh sáng trung tâm. Trên bề mặt và bên trong mỗi khối chứa các dòng chữ neon 3D sắc nét hiển thị ba từ khóa vừa đọc.]"
+    },
+    "Gợi ý tiếp theo (10s)": {
+      "Lời thoại (Voice-over)": "Nhưng thực tế không phải lúc nào cũng bằng phẳng. Điều gì sẽ xảy ra nếu giá nhà không giảm đều, mà rớt thê thảm theo một đường cong khi quá gần một bãi rác công nghiệp? Chúng ta sẽ cần đến Hồi quy đa thức.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Gợi ý:** [Mặt phẳng màu xanh đang phẳng phiu đột ngột bị bẻ cong, uốn lượn thành một mặt cong (curved surface) phức tạp, tạo thành các hố sụt lún màu đỏ sẫm tại một góc của đồ thị 3D, mô phỏng sự sụt giảm phi tuyến tính.]"
+    }
+  }
+]

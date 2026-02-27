@@ -1,0 +1,28 @@
+[
+  {
+    "Tình huống dẫn nhập (5s)": {
+      "Lời thoại (Voice-over)": "Hãy tưởng tượng một nhà kho tự động trị giá hàng triệu đô la. Một xe tự hành AGV chở linh kiện điện tử đắt tiền trượt mục tiêu chỉ hai centimet và gây ra va chạm dây chuyền. Tại sao hệ thống định vị lại thất bại dù được trang bị cảm biến đắt tiền nhất?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Mở đầu:** [Không gian Manim 3D hiển thị góc nhìn isometric của một nhà kho tối giản. Một khối hộp chữ nhật đại diện cho xe AGV di chuyển dọc theo trục toạ độ. Đột nhiên, quỹ đạo thực tế (đường nét đứt màu đỏ) lệch khỏi quỹ đạo lý thuyết (đường nét liền màu xanh lá), dẫn đến một vụ va chạm được mô phỏng bằng các hạt particle vỡ vụn phát sáng trong không gian 3D.]"
+    },
+    "Mô tả bài toán/vấn đề (15s)": {
+      "Lời thoại (Voice-over)": "Sai lầm phổ biến của các lập trình viên là tính toán sai số trên trục X và trục Y một cách độc lập. Họ tạo ra một vùng an toàn hình vuông hoặc hình tròn ảo bao quanh robot. Nhưng trong thực tế vật lý, độ trượt của bánh xe hay mặt sàn nghiêng khiến sai số trục X và Y có tính tương quan chặt chẽ. Khi xe trượt theo đường chéo, nó dễ dàng thoát ra khỏi hình vuông an toàn giả định, dẫn đến những tai nạn không thể lường trước.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Vấn đề:** [Camera 3D zoom cận cảnh vào chiếc AGV đặt tại gốc toạ độ O(0,0). Trục X và Y toả ra ánh sáng neon. Một hình vuông an toàn màu xanh dương được vẽ quanh AGV (biểu diễn sai số độc lập). Sau đó, hàng ngàn điểm dữ liệu nhỏ (mô phỏng vị trí thực tế) rơi xuống mặt phẳng, tạo thành một đám mây điểm có hình bầu dục nghiêng. Rất nhiều điểm dữ liệu màu đỏ tràn ra ngoài các góc của hình vuông xanh dương, kèm theo hiệu ứng nhấp nháy cảnh báo lỗi.]"
+    },
+    "Diễn giải/Minh họa (30s)": {
+      "Lời thoại (Voice-over)": "Đây là lúc Phân phối chuẩn hai chiều (Bivariate Normal Distribution) giải quyết triệt để bài toán. Thay vì tách biệt, ta xét xác suất đồng thời của cả X và Y thông qua Ma trận hiệp phương sai. Các phần tử trên đường chéo chính của ma trận đo lường phương sai độc lập, trong khi các phần tử còn lại nắm bắt độ tương quan. Khi vẽ đồ thị hàm mật độ xác suất trong không gian, ta không có một hình nón tròn trịa, mà là một mặt cong hình chuông bị kéo giãn theo hướng trượt của robot. Cắt ngang mặt cong này, ta thu được một 'Elip độ tin cậy' – ranh giới an toàn phản ánh chính xác 99% khả năng vị trí thực của AGV.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Giải pháp:** [Sử dụng Manim 3D: Mặt phẳng X-Y từ từ biến đổi, một mặt cong 3D (Surface Plot) biểu diễn hàm mật độ xác suất nổi lên với dải màu gradient từ xanh lục (thấp) đến đỏ rực (cao). Công thức ma trận hiệp phương sai Sigma hiện lơ lửng bằng LaTeX 3D. Khi các giá trị ngoài đường chéo của ma trận thay đổi, mặt chuông 3D bị kéo giãn và xoay nghiêng một cách mượt mà. Một mặt phẳng cắt ngang (slice) hạ từ trên xuống, chiếu bóng (projection) xuống mặt sàn X-Y tạo thành một đường viền Elip phát sáng rực rỡ, bao trọn hoàn hảo đám mây điểm dữ liệu.]"
+    },
+    "Tổng kết kiến thức (30s)": {
+      "Lời thoại (Voice-over)": "Bằng cách tích hợp ma trận hiệp phương sai vào thuật toán điều hướng, bộ não của AGV giờ đây tính toán ra một vùng an toàn hình Elip động. Vùng Elip này liên tục thay đổi hình dáng, kéo dài ra khi xe tăng tốc và phình to khi xe rẽ ngang. Sự tối ưu toán học này giúp hệ thống hiểu rõ bản chất không gian xác suất, chủ động điều chỉnh vận tốc, triệt tiêu hoàn toàn các điểm mù va chạm và tối đa hoá lưu lượng hàng hoá luân chuyển trong nhà kho.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Tổng kết:** [Góc máy Manim 3D nhìn từ trên cao xuống toàn bộ lưới nhà kho. Hàng chục chiếc AGV đang di chuyển đan xen với tốc độ cao. Xung quanh mỗi chiếc AGV là một Elip độ tin cậy phát sáng màu vàng cam. Các Elip này liên tục 'thở' (co giãn, xoay trục) theo thời gian thực (real-time) tương ứng với gia tốc và hướng rẽ của từng xe. Đồ thị thanh 3D bên góc màn hình hiển thị tỷ lệ va chạm giảm thẳng đứng từ 15% xuống 0.01%.]"
+    },
+    "Tóm tắt từ khóa (10s)": {
+      "Lời thoại (Voice-over)": "Để làm chủ không gian định vị, hãy khắc sâu ba khái niệm cốt lõi: Phân phối chuẩn hai chiều, Ma trận hiệp phương sai, và Elip độ tin cậy.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Từ khóa:** [Ba khối đa diện 3D bằng thuỷ tinh lơ lửng trong không gian tối. Bên trong mỗi khối chứa các dòng text neon 3D hiển thị lần lượt ba từ khoá. Các khối này xoay quanh một trục trung tâm là một ma trận toán học đang tự động giải mã.]"
+    },
+    "Gợi ý tiếp theo (10s)": {
+      "Lời thoại (Voice-over)": "Nền tảng toán học này không chỉ dành cho xe tự hành, mà còn dùng để bám bắt quỹ đạo tên lửa hay drone. Nhưng làm thế nào để cập nhật Elip này liên tục theo từng mili-giây? Đó là lúc Bộ lọc Kalman xuất hiện.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Gợi ý:** [Chuyển cảnh mượt mà: Nhà kho 3D tan biến thành các đường wireframe, tái tổ hợp thành hình ảnh một chiếc Drone đang bay lượn qua các toà nhà chọc trời. Phía trước Drone là một ống nón xác suất 3D liên tục uốn lượn định tuyến đường bay, dòng chữ 'Kalman Filter' hiện ra với hiệu ứng gõ phím.]"
+    }
+  }
+]

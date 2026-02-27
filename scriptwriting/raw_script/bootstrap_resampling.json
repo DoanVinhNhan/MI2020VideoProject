@@ -1,0 +1,28 @@
+[
+  {
+    "Tình huống dẫn nhập (5s)": {
+      "Lời thoại (Voice-over)": "Hãy tưởng tượng bạn đang thử nghiệm một loại thuốc ung thư đột phá, nhưng do tính chất bệnh hiếm, bạn chỉ có vỏn vẹn 15 bệnh nhân. Làm thế nào để chứng minh với hội đồng y khoa rằng hiệu quả của thuốc không phải do may mắn ngẫu nhiên?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Mở đầu:** [Không gian 3D tối, một chuỗi xoắn kép DNA phát sáng từ từ biến đổi thành một cụm gồm 15 hạt cầu lơ lửng mang ánh sáng xanh lục, đại diện cho bệnh nhân. Một dấu hỏi khổng lồ bằng lưới wireframe đổ bóng đen bao trùm lên toàn bộ cụm hạt này.]"
+    },
+    "Mô tả bài toán/vấn đề (15s)": {
+      "Lời thoại (Voice-over)": "Thông thường, các nhà nghiên cứu dựa vào đường cong hình chuông quen thuộc của phân phối chuẩn để ước lượng hiệu quả. Nhưng với tập dữ liệu dưới 20 người, nền tảng toán học truyền thống sụp đổ. Mẫu quá nhỏ để tạo thành sự đối xứng hoàn hảo. Nếu cố tình ép dữ liệu vào một phân phối chuẩn giả định, ta có nguy cơ cấp phép cho một loại thuốc vô dụng, hoặc tồi tệ hơn, vứt bỏ một phương pháp cứu mạng.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Vấn đề:** [Đồ thị không gian 3D hiện lên. Một mặt cong hình chuông (Normal Distribution) trong suốt, cứng nhắc, cố gắng chụp xuống 15 hạt cầu nằm rải rác. Các hạt không khớp với mặt cong; ngay lập tức, mặt chuông vỡ vụn thành những mảnh vỡ màu đỏ rực. Bảng cảnh báo điện tử nổi lên với dòng chữ 'N < 20: Assumption Failed' nhấp nháy liên tục.]"
+    },
+    "Diễn giải/Minh họa (30s)": {
+      "Lời thoại (Voice-over)": "Đó là lúc thuật toán Bootstrap - Rút mẫu lặp lại bước ra ánh sáng. Thay vì dựa vào các giả định lý thuyết, chúng ta để chính dữ liệu lên tiếng. Hãy tưởng tượng ta đặt 15 bệnh nhân vào một hộp ảo. Ta rút ngẫu nhiên một người, ghi lại chỉ số, và quan trọng nhất: đặt họ trở lại. Quá trình này lặp lại 15 lần để tạo ra một mẫu mô phỏng mới. Vì có hoàn lại, một số người sẽ xuất hiện nhiều lần, số khác thì không. Giờ đây, máy tính sẽ chạy mô phỏng này 10.000 lần. Từ 15 điểm gốc ban đầu, ta tính toán giá trị trung bình cho mỗi lần lặp, qua đó xây dựng nên một bản đồ xác suất khổng lồ và hoàn toàn khách quan.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Giải pháp:** [Thư viện Manim 3D mô phỏng chuyển động của hạt: 15 hạt gốc mang dải màu gradient được đặt trong một ống trụ thủy tinh phát sáng. Một cánh tay robot 3D tốc độ cao liên tục gắp một hạt ra, quét giá trị (các con số lơ lửng hiện lên), rồi thả lại vào ống. Quá trình tăng tốc đến mức tạo thành vệt sáng. Hàng chục ngàn khối lập phương nhỏ (đại diện cho các giá trị trung bình mới) rơi xuống như mưa, xếp chồng lên nhau tạo thành một mặt cong biểu diễn mật độ 3D nhấp nhô. Mặt cong này được phủ màu heat-map: xanh dương ở hai rìa và cam đỏ rực rỡ ở vùng đỉnh trung tâm.]"
+    },
+    "Tổng kết kiến thức (30s)": {
+      "Lời thoại (Voice-over)": "Bootstrap là sự chiến thắng của sức mạnh tính toán trước những rào cản toán học cứng nhắc. Bằng cách rút mẫu có hoàn lại, thuật toán khuếch đại một tập dữ liệu y sinh nhỏ bé thành một mô hình quần thể có ý nghĩa thống kê. Nó cho phép ta xác định chính xác khoảng tin cậy của hiệu quả thuốc mà không cần bận tâm dữ liệu có tuân theo đường cong hình chuông hay không. Sự đánh đổi ở đây là ta dùng năng lực xử lý của máy tính để bù đắp cho sự thiếu hụt của dữ liệu thực tế. Trong y sinh, điều này đồng nghĩa với việc đẩy nhanh tiến độ thử nghiệm lâm sàng, tiết kiệm hàng triệu đô la và đưa các phương pháp điều trị bệnh hiếm đến tay bệnh nhân nhanh hơn.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Tổng kết:** [Góc máy quay 3D chia đôi màn hình. Bên trái là một công thức toán học tĩnh đang nứt nẻ. Bên phải là mặt cong mật độ Bootstrap đang nhịp nhàng dao động theo luồng dữ liệu mới. Hai mặt phẳng ánh sáng vàng cắt dọc xuống mặt cong, giới hạn chính xác 'Khoảng tin cậy 95%'. Một dấu tick xanh lục neon bay lượn và khóa chặt vào vùng trung tâm giữa hai mặt phẳng.]"
+    },
+    "Tóm tắt từ khóa (10s)": {
+      "Lời thoại (Voice-over)": "Để làm chủ kỹ thuật này, hãy khắc sâu ba từ khóa cốt lõi sau: Rút mẫu có hoàn lại, Thống kê phi tham số, và Phân phối Bootstrap.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Từ khóa:** [Ba khối đa diện 3D bằng kim loại phản quang lơ lửng và xoay quanh một trục ánh sáng trung tâm. Tia laser từ ngoài khung hình bắn vào bề mặt các khối, khắc lên ba cụm từ khóa bằng phông chữ công nghệ phát sáng.]"
+    },
+    "Gợi ý tiếp theo (10s)": {
+      "Lời thoại (Voice-over)": "Thuật toán Bootstrap không chỉ cứu cánh cho y học. Bạn nghĩ sao nếu các chuyên gia tài chính dùng chính tư duy này để kiểm tra sức chịu đựng của danh mục đầu tư trước những đợt sụp đổ chưa từng có của thị trường chứng khoán?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Gợi ý:** [Hình ảnh chuyển cảnh mượt mà: Mặt cong xác suất y sinh đột ngột biến hình thành một biểu đồ nến chứng khoán 3D sắc nhọn. Các cột xanh đỏ đâm lên hạ xuống dữ dội, được bao bọc bởi một lưới không gian biểu thị độ biến động, kèm theo hiệu ứng sương mù và ánh sáng đỏ cảnh báo.]"
+    }
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "Tình huống dẫn nhập (5s)": {
+      "Lời thoại (Voice-over)": "Hãy tưởng tượng khoảnh khắc đếm ngược đến Black Friday. Hàng triệu người dùng cùng lúc nhấn nút 'Thanh toán'. Tại sao một số hệ thống máy chủ có thể xử lý mượt mà khối lượng khổng lồ này, trong khi số khác lại sụp đổ ngay giây đầu tiên, để lại cho khách hàng vòng xoay loading vô tận?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Mở đầu:** [Không gian 3D tối, một cụm máy chủ (server rack) phát sáng mờ ảo. Đột nhiên, một cơn bão gồm hàng vạn hạt ánh sáng (mô phỏng request) lao vụt tới từ mọi hướng. Hệ thống máy chủ nhấp nháy ánh sáng đỏ cảnh báo, sau đó vỡ vụn thành các mảnh lưới không gian (wireframe) lơ lửng trong không trung.]"
+    },
+    "Mô tả bài toán/vấn đề (15s)": {
+      "Lời thoại (Voice-over)": "Thông thường, các kỹ sư hệ thống thường dựa vào 'thời gian phản hồi trung bình' để cấp phát tài nguyên. Nhưng trung bình cộng là một cái bẫy chết người trong những đợt bùng nổ lưu lượng. Nó giả định các yêu cầu đến đều đặn và tốn thời gian xử lý như nhau. Trên thực tế, chỉ cần một vài truy vấn cơ sở dữ liệu phức tạp bị nghẽn, chúng sẽ chặn đứng toàn bộ hàng đợi. Khi hàng đợi vượt quá giới hạn bộ nhớ, hệ thống sẽ sụp đổ dây chuyền. Đây là sự thất bại điển hình của tư duy tuyến tính khi đối mặt với sự hỗn loạn ngẫu nhiên.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Vấn đề:** [Góc nhìn Manim 3D: Một đường ống trong suốt chứa các khối lập phương màu xanh lam trôi chảy đều đặn. Camera xoay 45 độ, một khối lập phương khổng lồ màu đỏ tía (truy vấn nặng) xuất hiện và kẹt cứng giữa ống. Các khối xanh phía sau liên tục dồn lại, va đập tạo ra hiệu ứng tia lửa điện. Đường ống phình to dần, hiển thị các vạch đỏ báo mức tải (load) tăng vọt cho đến khi nổ tung thành hàng ngàn đa giác nhỏ.]"
+    },
+    "Diễn giải/Minh họa (30s)": {
+      "Lời thoại (Voice-over)": "Để sinh tồn trong sự hỗn loạn, chúng ta không dùng số trung bình, mà phải mô hình hóa thời gian chờ bằng Phân phối Mũ (Exponential Distribution). Trái tim của giải pháp là hàm mật độ xác suất: f(x) bằng lambda nhân e mũ trừ lambda x. Tham số lambda đại diện cho tốc độ xử lý của máy chủ. Đồ thị này tiết lộ hai sự thật sinh tử: Thứ nhất, phần đỉnh nhọn cho thấy hầu hết các yêu cầu được xử lý cực nhanh. Thứ hai, phần 'đuôi dài' tiệm cận trục hoành chứng minh rằng luôn tồn tại một xác suất nhỏ cho những thời gian chờ đợi khổng lồ. Đặc biệt hơn, phân phối mũ có 'tính không nhớ' (memoryless): xác suất một yêu cầu hoàn thành trong giây tiếp theo hoàn toàn độc lập với việc nó đã chờ bao lâu. Bằng cách mô phỏng hàm này, hệ thống Auto-Scaling không đợi hàng đợi đầy mới phản ứng. Nó liên tục tính toán tích phân phần đuôi dài, và tự động kích hoạt các máy chủ ảo dự phòng ngay khoảnh khắc xác suất rủi ro vượt ngưỡng an toàn.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Giải pháp:** [Manim 3D: Một hệ trục tọa độ không gian 3D hiện ra. Một mặt cong neon màu lục lam dốc xuống từ trục Y và kéo dài vô tận theo trục X, biểu diễn hàm f(x). Khu vực dưới 'đuôi dài' của đồ thị nhịp nhàng phát xung màu đỏ cảnh báo. Các ký hiệu toán học (λ, e) xoay tròn dạng hologram. Những hạt cầu màu cam (request) rơi xuống theo đường cong; ngay khi một cụm hạt rơi vào vùng đuôi đỏ, một luồng sáng quét qua, lập tức dựng lên các khối hộp máy chủ ảo (translucent blocks) bên cạnh, biến các hạt đỏ trở lại màu xanh an toàn.]"
+    },
+    "Tổng kết kiến thức (30s)": {
+      "Lời thoại (Voice-over)": "Nhờ ứng dụng Phân phối Mũ, các kỹ sư dịch chuyển từ việc vá lỗi thụ động sang quản trị rủi ro bằng xác suất. Chúng ta không còn sợ hãi những đợt tăng lưu lượng đột biến vì mọi kịch bản tồi tệ nhất ở phần đuôi đồ thị đều đã được định lượng bằng toán học. Sự đánh đổi duy nhất là chi phí duy trì tài nguyên đám mây chờ, nhưng phần thưởng là hệ thống đạt tỷ lệ uptime tuyệt đối trong những giờ vàng doanh thu. Trong kỹ thuật hệ thống, thấu hiểu hình dáng của sự ngẫu nhiên luôn mang lại sức mạnh lớn hơn nhiều so với việc chỉ biết một con số trung bình vô hồn.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Tổng kết:** [Manim 3D: Hai biểu đồ không gian đặt cạnh nhau. Bên trái là mô hình tuyến tính đang sụp đổ với các khối đỏ tràn ra ngoài. Bên phải là mô hình xác suất: một lưới kiến trúc linh hoạt (dynamic grid) gồm các khối xanh lá cây đang 'thở' – tự động phình to và thu nhỏ nhịp nhàng để nuốt trọn cơn bão hạt dữ liệu đang lao tới. Camera lùi lại, các hạt dữ liệu hội tụ tạo thành một dấu tick khổng lồ màu vàng kim.]"
+    },
+    "Tóm tắt từ khóa (10s)": {
+      "Lời thoại (Voice-over)": "Hãy khắc sâu ba từ khóa cốt lõi này để làm chủ mọi hệ thống hàng đợi: Phân phối mũ, Tham số tốc độ Lambda, và Tính không nhớ.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Từ khóa:** [Ba khối lăng trụ kim loại nổi lên từ một mặt sàn phản chiếu bóng tối. Camera bay lượn quanh chúng, tia laser màu xanh cyan khắc trực tiếp lên bề mặt các khối ba cụm từ: 'Phân phối mũ', 'Tham số Lambda (λ)', 'Tính không nhớ'.]"
+    },
+    "Gợi ý tiếp theo (10s)": {
+      "Lời thoại (Voice-over)": "Phân phối mũ không chỉ cứu rỗi các trang thương mại điện tử. Bạn nghĩ sao nếu chúng ta dùng chính công thức này để dự báo chính xác thời điểm hỏng hóc của một động cơ phản lực trên máy bay thương mại?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Gợi ý:** [Khối máy chủ 3D từ từ biến hình (morphing) một cách mượt mà thành cấu trúc wireframe phức tạp của một tuabin động cơ máy bay. Một biểu đồ nhiệt (heatmap) màu đỏ bắt đầu lan tỏa dọc theo các cánh quạt, đi kèm với một bộ đếm ngược thời gian điện tử đang chạy lùi.]"
+    }
+  }
+]

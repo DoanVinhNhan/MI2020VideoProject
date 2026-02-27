@@ -1,0 +1,28 @@
+[
+  {
+    "Tình huống dẫn nhập (5s)": {
+      "Lời thoại (Voice-over)": "Bạn đã bao giờ chứng kiến một dây chuyền tự động hóa trị giá hàng triệu đô la phải đóng băng hoàn toàn, chỉ vì một con cảm biến quang học bé bằng nửa bao diêm ngừng hoạt động?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Mở đầu:** [Không gian Manim 3D tối, camera lướt dọc theo một băng chuyền công nghiệp rực sáng ánh kim loại. Đột ngột, một khối lập phương nhỏ đại diện cho cảm biến nhấp nháy đèn đỏ chói lọi. Ngay lập tức, toàn bộ hệ thống bánh răng 3D đằng sau khựng lại, chuyển từ màu xanh lục sang xám xịt.]"
+    },
+    "Mô tả bài toán/vấn đề (15s)": {
+      "Lời thoại (Voice-over)": "Phản xạ tự nhiên của các kỹ sư cơ khí là tìm mua những linh kiện xịn hơn, bền hơn. Nhưng toán học lại chỉ ra một sự thật phũ phàng: Trong một hệ thống mắc nối tiếp, độ tin cậy tổng thể bằng tích các độ tin cậy thành phần. Nếu dây chuyền của bạn có 100 mắt xích, dù mỗi mắt xích xịn đến mức có độ tin cậy 99%, thì xác suất toàn bộ hệ thống hoạt động trơn tru chỉ còn vỏn vẹn 36%. Việc cố gắng nâng cấp từng linh kiện lên 99,9% sẽ đẩy chi phí lên mức không tưởng, tạo ra một điểm nghẽn cục bộ về mặt ngân sách.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Vấn đề:** [Đồ thị không gian 3D hiện lên. Trục X là số lượng linh kiện, trục Y là độ tin cậy. Một đường cong màu đỏ lao dốc không phanh khi số lượng linh kiện tăng lên. Camera zoom cận cảnh vào một chuỗi các quả cầu ánh sáng nối tiếp nhau bằng các ống thủy tinh; khi một quả cầu nứt vỡ, luồng năng lượng hạt particle vàng chạy qua ống thủy tinh lập tức bị đứt gãy hoàn toàn.]"
+    },
+    "Diễn giải/Minh họa (30s)": {
+      "Lời thoại (Voice-over)": "Đây là lúc lý thuyết Xác suất thống kê về Hệ thống mắc song song giải cứu túi tiền của doanh nghiệp. Thay vì mua một linh kiện đắt gấp mười lần, kỹ sư lắp thêm một linh kiện giá rẻ chạy song song làm phương án dự phòng. Công thức lúc này thay đổi hoàn toàn: Xác suất hỏng hóc của cụm song song bằng tích các xác suất hỏng hóc thành phần. Nếu hai linh kiện có độ tin cậy 90% mắc song song, xác suất hỏng của mỗi cái là 10%. Xác suất cả hai cùng hỏng chỉ còn 10% nhân 10%, tức là 1%. Đột nhiên, độ tin cậy của cụm đó nhảy vọt lên 99% với chi phí cực thấp. Mắt xích yếu nhất đã được bọc thép bằng tư duy xác suất.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Giải pháp:** [Sử dụng Manim 3D: Một phương trình toán học nổi lơ lửng R_sys = 1 - (1-R_1)(1-R_2). Chuỗi quả cầu nối tiếp tách ra ở điểm đứt gãy, hình thành hai nhánh ống thủy tinh chạy song song. Các hạt năng lượng particle di chuyển đến ngã ba, khi nhánh trên xuất hiện vách ngăn màu đỏ báo lỗi, dòng hạt tự động cuộn chảy trơn tru qua nhánh dưới màu xanh lục. Cột phần trăm độ tin cậy 3D bên cạnh bật tăng mạnh mẽ từ 90% lên 99%.]"
+    },
+    "Tổng kết kiến thức (30s)": {
+      "Lời thoại (Voice-over)": "Bài toán thiết kế dây chuyền tự động hóa thực chất là một bài toán tối ưu hóa hàm mục tiêu dưới góc nhìn xác suất. Sự đánh đổi ở đây là không gian lắp đặt và độ phức tạp của hệ thống điều khiển so với thời gian chết của nhà máy. Bằng cách lập mô hình toán học, phân tích các điểm thắt nút có rủi ro cao nhất, kỹ sư có thể phân bổ hệ thống dự phòng song song một cách chiến lược. Bạn không cần một dây chuyền hoàn hảo ở mọi chi tiết, bạn chỉ cần một kiến trúc hệ thống biết cách tự bao dung cho những sai số ngẫu nhiên của chính nó.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Tổng kết:** [Một mặt cong biểu diễn mật độ density surface trong không gian 3D, trục Z là 'Hiệu quả chi phí'. Một điểm cực đại đỉnh đồi màu vàng sáng được đánh dấu. Lưới dữ liệu wireframe của toàn bộ nhà máy hiện lên, các module quan trọng tự động nhân đôi thành các khối hộp song song, tạo ra một mạng lưới dòng chảy năng lượng liên tục, đan xen nhau không bao giờ tắt.]"
+    },
+    "Tóm tắt từ khóa (10s)": {
+      "Lời thoại (Voice-over)": "Hãy ghi nhớ ba nền tảng cốt lõi này cho thiết kế của bạn: Độ tin cậy hệ thống, Cấu trúc nối tiếp - song song, và Thiết kế dự phòng.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Từ khóa:** [Ba khối đa diện đều Platonic solids bằng kính trong suốt, bên trong chứa các hạt ánh sáng chuyển động hỗn loạn. Chúng lơ lửng, tự xoay quanh trục trong không gian 3D, trên mỗi mặt phẳng kính khắc laser phát sáng ba từ khóa: System Reliability, Series/Parallel, Redundancy Design.]"
+    },
+    "Gợi ý tiếp theo (10s)": {
+      "Lời thoại (Voice-over)": "Nguyên lý dự phòng này không chỉ dành cho bánh răng hay băng chuyền. Vậy làm thế nào mà các trung tâm dữ liệu khổng lồ vẫn sống sót khi hàng loạt ổ cứng bốc cháy cùng lúc?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Gợi ý:** [Khung cảnh nhà máy cơ khí vỡ vụn thành hàng triệu pixel, tái tổ hợp lại thành một hành lang máy chủ server farm 3D sâu hun hút. Một vài vỉ máy chủ bốc khói đỏ, nhưng các luồng dữ liệu sợi quang học xanh lam ngay lập tức bẻ lái sang các tủ rack khác mượt mà.]"
+    }
+  }
+]

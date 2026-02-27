@@ -1,0 +1,28 @@
+[
+  {
+    "Tình huống dẫn nhập (5s)": {
+      "Lời thoại (Voice-over)": "Bạn có bao giờ thắc mắc, làm thế nào một bộ điều khiển trung tâm tại nhà máy luyện kim có thể biết chính xác nhiệt độ lò nung đang ở mức hàng ngàn độ C, trong khi thứ duy nhất nó nhận được từ cảm biến chỉ là những dòng điện áp dao động vỏn vẹn vài milivolt?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Mở đầu:** [Không gian 3D tối, camera lướt qua một lò nung kim loại rực đỏ. Một cảm biến phát ra ánh sáng xanh lục, bắn ra một luồng hạt điện tử đại diện cho dòng điện áp (1.2V, 1.5V) bay dọc theo đường dây cáp, chui vào một khối hộp PLC bằng kim loại. Khối PLC lập tức phóng to một màn hình Hologram hiển thị con số '1540°C' rực rỡ.]"
+    },
+    "Mô tả bài toán/vấn đề (15s)": {
+      "Lời thoại (Voice-over)": "Trong thực tế công nghiệp, tín hiệu trả về từ cảm biến không bao giờ là những con số hoàn hảo. Dưới tác động của nhiễu nhiệt, từ trường và sai số cơ khí, các giá trị điện áp luôn dao động hỗn loạn. Nếu kỹ sư tự động hóa chỉ dùng phép tam suất đơn giản hoặc nối trực tiếp các điểm dữ liệu thô, hệ thống sẽ nhận những thông số giật cục. Van áp suất sẽ đóng mở sai lệch, gây hao mòn, thậm chí là thảm họa nổ lò hơi.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Vấn đề:** [Thư viện Manim 3D dựng một hệ trục tọa độ không gian. Trục X là Điện áp (Volt), trục Y là Nhiệt độ (°C). Hàng trăm quả cầu nhỏ màu đỏ (dữ liệu thô) rơi xuống nhưng nằm rải rác, nảy lên xuống hỗn loạn biểu diễn nhiễu. Một đường gấp khúc màu trắng cố gắng nối tất cả các quả cầu này lại tạo ra hình răng cưa nhọn hoắt. Ở góc màn hình, một đồng hồ đo áp suất 3D kim loại đang rung lắc dữ dội, kim chỉ nam giật liên tục vào vùng đỏ (Danger).]"
+    },
+    "Diễn giải/Minh họa (30s)": {
+      "Lời thoại (Voice-over)": "Đây chính là lúc mô hình Hồi quy thống kê bước vào để định hình lại 'Đường đặc tuyến'. Thay vì tin tưởng mù quáng vào từng điểm dữ liệu nhiễu, ta áp dụng phương pháp Bình phương tối thiểu. Thuật toán phóng một đường cong toán học đi xuyên qua đám mây dữ liệu. Nó tính toán các 'phần dư' - khoảng cách từ mỗi điểm thô đến đường cong - và liên tục uốn nắn hệ số sao cho tổng bình phương các khoảng cách này là nhỏ nhất. Với cảm biến phi tuyến tính, một phương trình đa thức bậc hai sẽ bóc tách hoàn toàn nhiễu ngẫu nhiên, bắt trọn bản chất vật lý thực sự.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Giải pháp:** [Đồ thị Manim 3D tiếp tục chuyển động. Đường răng cưa hỗn loạn tan biến thành các hạt bụi. Một đường cong (Curve) phát sáng màu xanh cyan mượt mà xuất hiện, lướt xuyên qua đám mây quả cầu đỏ. Từ mỗi quả cầu đỏ, các vạch đứt nét màu vàng (phần dư - residuals) thả vuông góc xuống đường cong xanh. Khi đường cong tự động uốn lượn để tối ưu, các vạch vàng ngắn dần lại. Bên cạnh, công thức 3D nổi lên: 'T = β₀ + β₁V + β₂V²' với các hệ số β chạy số liên tục cho đến khi chốt lại ở giá trị tối ưu.]"
+    },
+    "Tổng kết kiến thức (30s)": {
+      "Lời thoại (Voice-over)": "Bằng cách hiệu chuẩn thông qua hồi quy, chúng ta đã biến một mớ tín hiệu điện áp nhiễu loạn thành một mô hình chuyển đổi mượt mà, có độ tin cậy cao để nạp trực tiếp vào bộ điều khiển PLC. Sự đánh đổi thông minh ở đây là chấp nhận một sai số cực nhỏ trên toàn cục, để loại bỏ hoàn toàn những cú sốc dữ liệu cục bộ. Kết quả là một vòng lặp điều khiển PID siêu ổn định, đảm bảo an toàn tuyệt đối cho các dây chuyền sản xuất khổng lồ.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Tổng kết:** [Màn hình chia đôi (Split-screen 3D). Nửa trái: Hệ thống cũ với đám mây điểm đỏ rung lắc và đường nối răng cưa, làm hệ thống van cơ học bên dưới đóng mở loạn xạ, tóe lửa. Nửa phải: Đường đặc tuyến hồi quy màu xanh phát sáng êm ái, các hạt tín hiệu trượt mượt mà trên đường cong này. Bên dưới, hệ thống van cơ học hoạt động nhịp nhàng, tỏa ra luồng khí màu xanh lá cây an toàn. Đồ thị hàm mất mát (Loss function) trượt xuống đáy dốc và dừng lại.]"
+    },
+    "Tóm tắt từ khóa (10s)": {
+      "Lời thoại (Voice-over)": "Hãy ghi nhớ ba từ khóa cốt lõi của quá trình hiệu chuẩn này: Hồi quy bình phương tối thiểu, Đường đặc tuyến cảm biến, và Xử lý nhiễu tín hiệu.",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Từ khóa:** [Ba khối lăng trụ lục giác bằng kim loại nguyên khối bay lơ lửng trong không gian tối. Chúng xoay tròn quanh một trục năng lượng ở giữa. Tia laser khắc lên bề mặt mỗi khối ba cụm từ phát sáng neon: 'Bình phương tối thiểu', 'Đường đặc tuyến', 'Xử lý nhiễu'.]"
+    },
+    "Gợi ý tiếp theo (10s)": {
+      "Lời thoại (Voice-over)": "Kỹ thuật hồi quy không chỉ dừng lại ở cảm biến nhiệt. Bạn nghĩ sao nếu chúng ta dùng chính mô hình này để phân tích độ rung cơ học, từ đó dự báo chính xác ngày tàn của một động cơ phản lực?",
+      "Đoạn video kết quả kèm câu hỏi (Visuals)": "**Gợi ý:** [Chuyển cảnh cực nhanh (Zoom-in). Đồ thị Manim biến mất, thay vào đó là mô hình lưới (wireframe) 3D của một tuabin động cơ máy bay đang quay tít. Các sóng rung động màu cam tỏa ra, và một đường hồi quy dự báo tuổi thọ phóng thẳng về phía mốc thời gian 'Failure' trên trục tọa độ ảo.]"
+    }
+  }
+]
