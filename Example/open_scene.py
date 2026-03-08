@@ -10,13 +10,7 @@ from object.logo import Logo
 # Import SAU manimlib để ghi đè UP/DOWN/LEFT/RIGHT và định nghĩa font-size constants
 from object.layout_9_16 import *
 
-# Tuân thủ Video_format.md:
-# 1. Định dạng 9:16  2. Độ phân giải 1080x1920  3. FPS 60
-# 4. Vùng an toàn 15% (xem layout_9_16.py cho SAFE_TOP/SAFE_BOTTOM)
-config.frame_size   = (1080, 1920)
-config.frame_height = 8
-config.frame_width  = 4.5
-config.frame_rate   = 60
+config.frame_size = (1080,1920) 
 
 
 class OpenVideo(Scene):
@@ -28,15 +22,15 @@ class OpenVideo(Scene):
         bg = Background()
         self.add(bg)
         
-        # 3. Logo mở đầu: Đặt vị trí chính giữa khi mở đầu
+        # 3. Logo mở đầu: Fade in tại ORIGIN
         logo = Logo().move_to(ORIGIN)
-        # Chuyển cảnh tĩnh theo Danh sách hiệu ứng: run_time=0.5
         self.play(FadeIn(logo, shift=UP), run_time=0.5)
         self.wait(0.5)
         
-        # Di chuyển logo lên góc trên bên trái
+        # Di chuyển logo vào góc trên trái trong vùng an toàn
+        # Dùng SAFE_TOP và SAFE_LEFT từ layout_9_16 để đảm bảo không bị cắt
         self.play(
-            logo.animate.scale(0.5).to_corner(UL, buff=0.5),
+            logo.animate.scale(0.4).move_to(SAFE_TOP + SAFE_LEFT),
             run_time=0.5
         )
         
@@ -49,8 +43,10 @@ class OpenVideo(Scene):
             color=WHITE,
             font="Sans-serif"
         )
-        title_bg = BackgroundRectangle(title_text, color=BLUE, fill_opacity=1, buff=0.3)
-        title = VGroup(title_bg, title_text).to_edge(UP, buff=1.5)
+        title_bg = BackgroundRectangle(title_text, color=BLUE, fill_opacity=1, buff=0.2)
+        # Đặt title ngay dưới logo, bên trong vùng an toàn
+        # SAFE_TOP (y=3.4) trừ chiều cao title + logo để layout thẳng đứng
+        title = VGroup(title_bg, title_text).move_to(UP * 2.2)
         
         self.play(FadeIn(title, shift=DOWN), run_time=0.5)
         self.wait(1)
@@ -64,7 +60,8 @@ class OpenVideo(Scene):
             font="Sans-serif",
             alignment="CENTER"
         )
-        question_text.next_to(title, DOWN, buff=1.0)
+        # Câu hỏi mở — đặt tại ORIGIN (tâm màn hình) theo Video_format.md
+        question_text.move_to(ORIGIN)
         
         # Danh sách hiệu ứng: Sinh Text (hiệu ứng gõ Text) dùng Write()
         self.play(Write(question_text), run_time=1.0)
