@@ -1,0 +1,9 @@
+camera:
+  resolution: (1080, 1920)
+
+window:
+  size: (540, 960)
+
+sizes:
+  frame_height: 14.22
+  frame_width: 8.0

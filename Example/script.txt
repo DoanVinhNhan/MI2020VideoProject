@@ -1,0 +1,30 @@
+1. Tình huống dẫn nhập
+Trong kỹ thuật viễn thông và truyền tải thông tin, dữ liệu luôn phải đối mặt với các nhiễu loạn từ môi trường. Làm sao để ta có thể đánh giá được chất lượng và độ tin cậy của một hệ thống truyền tin?
+Mô tả bài toán/vấn đề cần giải quyết
+Chỉ số cốt lõi để đo lường độ chính xác của dữ liệu là BEP (Bit Error Probability - Xác suất lỗi bit). BEP được định nghĩa là xác suất để một bit bất kỳ bị sai trạng thái (từ 0 thành 1 hoặc ngược lại) sau khi đi qua kênh truyền.
+Đối với các hệ thống có hiệu ứng phi tuyến hoặc kênh truyền quá phức tạp, việc tìm ra chính xác cho BEP là bất khả thi. Khi đó, phương pháp Mô phỏng Monte Carlo được sử dụng như một công cụ thống kê mạnh mẽ: sử dụng việc lấy mẫu ngẫu nhiên lặp đi lặp lại nhiều lần để xấp xỉ BEP.
+
+
+2. Diễn giải/Minh hoạ
+Việc truyền tải N bit dữ liệu qua một kênh truyền có thể được mô hình hóa thành một dãy N phép thử độc lập.
+Định nghĩa X_i là biến ngẫu nhiên chỉ thị trạng thái lỗi của bit thứ i. X_i tuân theo Phân phối Bernoulli:
+X_i = 1: Sự kiện bit thứ i bị lỗ
+X_i = 0: Sự kiện bit thứ i được truyền đúng.
+Khi đó, tổng số bit lỗi E sau khi truyền N bit là một biến ngẫu nhiên tuân theo Phân phối Nhị thức:
+E = \sum_{i=1}^{N} X_i
+
+Theo định nghĩa thống kê, xác suất lỗi bit ước lượng chính là trung bình mẫu của biến ngẫu nhiên này. Theo Luật số lớn, khi kích thước mẫu N tiến tới vô cùng, trung bình mẫu sẽ hội tụ theo xác suất về giá trị kỳ vọng lý thuyết:
+\lim_{N \to \infty} P\left(\left| \frac{E}{N} - p \right| < \epsilon\right) = 1
+
+Từ định lý này, phương pháp Monte Carlo khẳng định: với N đủ lớn, ta có thể dùng tần suất xuất hiện lỗi để xấp xỉ xác suất lỗi:
+\text{BEP} \approx \frac{E}{N}
+
+3. Tổng kết kiến thức
+Tóm lại, để giải quyết bài toán đo lường kênh truyền, chúng ta áp dụng Mô phỏng Monte Carlo, mượn tính chất của phân phối Bernoulli và phân phối Nhị thức, đồng thời dựa trên nền tảng của Luật số lớn để ước lượng Xác suất lỗi bit.
+
+4. Tóm tắt từ khoá
+Như vậy, từ khoá ngày hôm nay là Monte Carlo simulate, Luật số lớn, Phân phối nhị thức và Phân phối Bernoulli. Các bạn có thể tìm hiểu sâu thêm về những từ khoá này để hiểu biết hơn về ứng dụng của xác suất.
+
+5. Gợi ý tiếp theo
+Gợi ý tiếp theo dành cho bạn, mô phỏng Nhiễu trắng Gaussian bằng phân phối chuẩn.
+
