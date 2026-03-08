@@ -41,9 +41,9 @@ ORIGIN = np.array([0., 0., 0.])
 
 # ─── Font-size constants ────────────────────────────────────────────────────
 # Quy ước Color_vs_Font.md         16:9    →   9:16
-TITLE_FONT_SIZE    = 40   # (thay vì 48)  – đủ rõ, không tràn chiều ngang
-SUBTITLE_FONT_SIZE = 26   # (thay vì 32)  – fit trong frame hẹp
-CAPTION_FONT_SIZE  = 20   # text chú thích nhỏ
+TITLE_FONT_SIZE    = 20   # (thay vì 48)  – đủ rõ, không tràn chiều ngang
+SUBTITLE_FONT_SIZE = 12   # (thay vì 32)  – fit trong frame hẹp
+CAPTION_FONT_SIZE  = 10   # text chú thích nhỏ
 
 # ─── Safe-zone anchor points ────────────────────────────────────────────────
 # frame_height=8  → half = 4.0  → 15% margin = 0.6  → safe = ±3.4

@@ -5,3 +5,5 @@
 3. Kế thừa chuẩn Format: Agent phải setup scene với background, color scheme, typo, và vùng an toàn (safe zones) tuân thủ đúng mọi quy tắc định dạng video đã được xác định ở các file tiêu chuẩn cấu hình (convention files) tương ứng.
 4. Áp dụng chuẩn Animation: Khuyến khích tận dụng hàm `always_redraw` kết hợp `ValueTracker` để đồng bộ chuyển động của nhiều object, tạo sự mạch lạc logic và tiết giảm toán học nội suy vector thủ công thay vì tính frame-by-frame.
 5. Setup hệ thống đường dẫn (Imports): Main script phải luôn tự động thêm đường dẫn folder gốc vào `sys.path` để đảm bảo việc import các custom module ở các thư mục bậc con, bậc cha diễn ra thông suốt và không lỗi.
+6. Tuân thủ chuẩn hiệu ứng (Effects): Agent phải áp dụng đúng các hiệu ứng đã được xác định trong file Effects.md.
+7. Sử dụng các tham số được định nghĩa trong ../layout.py
