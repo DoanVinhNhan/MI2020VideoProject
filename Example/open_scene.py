@@ -12,16 +12,24 @@ from object.logo import Logo
 # 1. Định dạng 9:16 (Mobile/Shorts/Reels/TikTok)
 # 2. Độ phân giải: 1080x1920
 # 3. FPS: 60
-# 4. Vùng an toàn: 15% trên/dưới (frame_height=14.22 -> safe margin = 2.13 units từ rìa)
-#    Tức là object phải nằm trong khoảng y: [-4.98, 4.98]
-config.frame_size = (1080, 1920)
-config.frame_rate = 60
+# 4. Vùng an toàn: 15% trên/dưới
+#
+# Hệ toạ độ ManimGL với 9:16:
+#   frame_height = 8  (mặc định giữ nguyên)
+#   frame_width  = 8 * (9/16) = 4.5
+#   => X: [-2.25, +2.25]   Y: [-4.0, +4.0]
+#   Safe zone 15%: X: [-1.9, +1.9]   Y: [-3.4, +3.4]
+config.frame_size   = (1080, 1920)   # kích thước pixel
+config.frame_height = 8              # chiều cao toạ độ (giữ mặc định)
+config.frame_width  = 4.5            # chiều rộng toạ độ = 8 * (9/16)
+config.frame_rate   = 60
 
-# Hằng số vùng an toàn
-# frame_height ≈ 14.22 (= 8 * 16/9), safe_margin = 15% * 7.11 = 2.13
-# => Giới hạn Y an toàn: top_safe = UP * (7.11 - 2.13) = UP * 4.98
-SAFE_TOP    = UP    * 4.5   # buffer thêm để chắc chắn
-SAFE_BOTTOM = DOWN  * 4.5
+# Hằng số vùng an toàn (15% cách rìa)
+# Y: 4.0 * 0.85 = 3.4 | X: 2.25 * 0.85 = 1.91
+SAFE_TOP    = UP    * 3.2
+SAFE_BOTTOM = DOWN  * 3.2
+SAFE_LEFT   = LEFT  * 1.8
+SAFE_RIGHT  = RIGHT * 1.8
 
 
 class OpenVideo(Scene):
@@ -39,11 +47,10 @@ class OpenVideo(Scene):
         self.play(FadeIn(logo, shift=UP), run_time=0.5)
         self.wait(0.5)
         
-        # Di chuyển logo lên trong vùng an toàn (SAFE_TOP)
-        # Tuân thủ Video_format.md: tránh vùng 15% trên cùng (rìa tuyệt đối ≈ 7.11)
-        # Logo được đặt tại SAFE_TOP để nằm trong vùng hiển thị hợp lệ
+        # Di chuyển logo lên góc trên trong vùng an toàn
+        # frame_width=4.5 => X max = 2.25  => dùng LEFT*1.5 để an toàn
         self.play(
-            logo.animate.scale(0.5).move_to(SAFE_TOP + LEFT * 3.0),
+            logo.animate.scale(0.4).move_to(SAFE_TOP + LEFT * 1.5),
             run_time=0.5
         )
         
@@ -57,9 +64,9 @@ class OpenVideo(Scene):
             color=WHITE,
             font="Sans-serif"
         )
-        title_bg = BackgroundRectangle(title_text, color=BLUE, fill_opacity=1, buff=0.3)
-        # Đặt title phía trên ORIGIN một chút, trong vùng an toàn
-        title = VGroup(title_bg, title_text).move_to(UP * 2.5)
+        title_bg = BackgroundRectangle(title_text, color=BLUE, fill_opacity=1, buff=0.2)
+        # Title ở phía trên ORIGIN, căn giữa (frame_height=8 => y in [-4,4])
+        title = VGroup(title_bg, title_text).move_to(UP * 1.8)
         
         self.play(FadeIn(title, shift=DOWN), run_time=0.5)
         self.wait(1)
@@ -73,9 +80,9 @@ class OpenVideo(Scene):
             font="Sans-serif",
             alignment="CENTER"
         )
-        # Câu hỏi đặt ở ORIGIN (hoặc dưới title), đây là object quan trọng nhất
-        # Tuân thủ Video_format.md: tập trung object quan trọng ở ORIGIN
-        question_text.move_to(ORIGIN + DOWN * 1.0)
+        # Câu hỏi mở – đặt dưới title, tập trung gần ORIGIN
+        # Căn bắt đầu bất buộc sau title để giữ layout thẳng đứng rõ ràng
+        question_text.next_to(title, DOWN, buff=0.8)
         
         # Danh sách hiệu ứng: Sinh Text (hiệu ứng gõ Text) dùng Write()
         self.play(Write(question_text), run_time=1.0)
